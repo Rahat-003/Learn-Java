@@ -1,0 +1,12 @@
+Creational Pattern:
+    Instead of creating objects directly, these patterns give more
+    flexibility in how objects come into existence
+    Example: Singleton, Builder, Factory
+
+Strategic Pattern:
+    This pattern deals with how objects are related to each other.
+    Example: Facade, Adapter
+
+Behavioral Pattern:
+    Handle Communication between objects - how they interact and distribute responsibility.
+    Example: Strategy, Observer
