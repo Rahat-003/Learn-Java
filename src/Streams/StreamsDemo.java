@@ -11,33 +11,25 @@ public class StreamsDemo {
 
     public static void show () {
         List<Movie> movies = List.of(
-                new Movie("d", 35),
-                new Movie("c", 30),
-                new Movie("b", 20),
-                new Movie("a", 25),
-                new Movie("e", 40)
+                new Movie("a", 10, Genre.THRILLER),
+                new Movie("b", 20, Genre.ACTION),
+                new Movie("c", 30, Genre.ACTION)
+
+
         );
 
         Stream<Movie> stream = movies.stream();
 
-
-        var result = stream
-                .filter(m->m.getLikes() > 25)
-                        .map(Movie::getTitle)
-                                .collect(Collectors.joining(", "));
-//                .collect(Collectors.summarizingInt(Movie::getLikes));
+        var result = movies.stream()
+                        .collect(Collectors.groupingBy(
+                                Movie::getGenre,
+                                Collectors.mapping(
+                                        Movie::getTitle,
+                                        Collectors.joining(", ")
+                                )
+                        ));
 
         System.out.println(result);
-
-//        movies.stream()
-//                .map(movie -> movie.getTitle())
-//                .forEach(System.out::println);
-
-
-//        movies.stream()
-//                .mapToInt(movie -> movie.getLikes())
-//                .forEach(System.out :: println);
-
 
 //        Imperative Programming
 //        int count = 0;

@@ -1,44 +1,23 @@
-import Design_Pattern.Memento.Editor;
-import Design_Pattern.Memento.History;
-import Streams.CreatingStreamsDemo;
-import Streams.Movie;
-import Streams.StreamsDemo;
-
-import java.util.*;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-
-class node {
-    public static int square (int n, int x) {
-        return n * x;
-    }
-
-}
+import Collections.MainCollection;
+import Generics.GenericsMain;
+import Reflection.ReflectionMain;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 //        StreamsDemo.show();
 
-        var editor = new Editor();
-        var history = new History();
+//        UIControl[] controls = {
+//                new TextBox(),
+//                new CheckBox()
+//        };
+//
+//        for (var control : controls) {
+//            control.render();
+//        }
 
-        editor.setContent("a");
-        history.push(editor.createState());
-
-        editor.setContent("b");
-        history.push(editor.createState());
-
-        editor.setContent("c");
-        history.push(editor.createState());
-
-        editor.setContent("d");
-
-
-
-
+//        MainCollection.main(args);
+//        GenericsMain.main(args);
+        ReflectionMain.main(args);
     }
 }
