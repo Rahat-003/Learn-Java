@@ -15,7 +15,6 @@ public class StreamsDemo {
                 new Movie("b", 20, Genre.ACTION),
                 new Movie("c", 30, Genre.ACTION)
 
-
         );
 
         Stream<Movie> stream = movies.stream();
