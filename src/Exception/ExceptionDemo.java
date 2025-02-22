@@ -8,7 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class ExceptionDemo {
-    public static  void show() {
+    public static  void show() throws IOException {
         try(
                 var reader = new FileReader("file.txt");
                 var writer = new FileWriter("output.txt");
@@ -16,7 +16,9 @@ public class ExceptionDemo {
             var value = reader.read();
         }
         catch (IOException e) {
+//            e.printStackTrace();
             System.out.println("Could not read data");
+            throw e;
         }
     }
 
