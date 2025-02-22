@@ -8,19 +8,28 @@ import java.text.SimpleDateFormat;
 
 public class ExceptionDemo {
     public static  void show() {
+        FileReader reader = null;
         try {
-            var reader = new FileReader("file.txt");
+            reader = new FileReader("file.txt");
             var value = reader.read();
             System.out.println("File opened");
-            new SimpleDateFormat().parse("");
-
+//            new SimpleDateFormat().parse("");
         }
 //        catch (FileNotFoundException ex) {
 //            System.out.println(ex.getMessage());
 //            System.out.println(System.getProperty("user.dir"));
 //        }
-        catch (IOException | ParseException e) {
+        catch (IOException e) {
             System.out.println(e.getMessage());
+        }
+        finally {
+            if(reader != null) {
+                try{
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 //        catch (ParseException e) {
 //            throw new RuntimeException(e);
