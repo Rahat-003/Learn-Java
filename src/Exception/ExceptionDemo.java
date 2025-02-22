@@ -19,4 +19,14 @@ public class ExceptionDemo {
             System.out.println("Could not read data");
         }
     }
+
+    public static void throwException() {
+        var account = new Account();
+        try {
+            account.deposit(-1);
+        } catch (IOException e) {
+            System.out.println("Message is: " + e.getMessage());
+        }
+    }
+
 }
