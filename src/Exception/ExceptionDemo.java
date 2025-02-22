@@ -31,4 +31,14 @@ public class ExceptionDemo {
         }
     }
 
+    public static void throwCustomException() {
+        var account = new Account();
+        try {
+            account.withdraw(20);
+        } catch (InsufficientFundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
 }
