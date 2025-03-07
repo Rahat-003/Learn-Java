@@ -1,11 +1,5 @@
-import Collections.MainCollection;
+import DesignPattern.DesignPatternMain;
 import Generics.GenericsMain;
-import Reflection.ReflectionMain;
-import Optional.OptionalMain;
-import Exception.ExceptionMain;
-
-import java.util.Optional;
-
 
 public class Main {
     public static void main(String[] args) throws Exception{
@@ -24,7 +18,9 @@ public class Main {
 //        GenericsMain.main(args);
 //        ReflectionMain.main(args);
 //        OptionalMain.main(args);
-        ExceptionMain.main(args);
+//        ExceptionMain.main(args);
+
+        DesignPatternMain.Main(args);
 
     }
 }
