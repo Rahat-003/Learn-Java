@@ -1,12 +1,5 @@
-import Collections.MainCollection;
+import DesignPattern.DesignPatternMain;
 import Generics.GenericsMain;
-import Reflection.ReflectionMain;
-import Optional.OptionalMain;
-import Exception.ExceptionMain;
-
-import java.util.Optional;
-
-import FunctionalInterface.Ifunctional;
 
 public class Main {
     public static void main(String[] args) throws Exception{
@@ -27,8 +20,7 @@ public class Main {
 //        OptionalMain.main(args);
 //        ExceptionMain.main(args);
 
-        Ifunctional test = () -> System.out.println("Hello world!");
-        test.go();
+        DesignPatternMain.Main(args);
 
     }
 }
