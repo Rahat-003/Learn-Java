@@ -1,6 +1,7 @@
 package DesignPattern;
 
 
+import DesignPattern.Behavioural.BehaviouralMain;
 import DesignPattern.SOLID.SOLID_Main;
 
 /**
@@ -11,6 +12,7 @@ import DesignPattern.SOLID.SOLID_Main;
 public class DesignPatternMain {
     public static void Main(String args[]) {
         System.out.println("\n\nHello design pattern");
-        SOLID_Main.main(args);
+//        SOLID_Main.main(args);
+        BehaviouralMain.main(args);
     }
 }
