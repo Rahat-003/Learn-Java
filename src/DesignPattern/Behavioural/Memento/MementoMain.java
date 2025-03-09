@@ -1,6 +1,6 @@
 package DesignPattern.Behavioural.Memento;
 
-import org.w3c.dom.Text;
+
 
 /**
  * A text editor where the user can undo changes, such as text addition, deletion, or formatting.
@@ -12,13 +12,27 @@ import org.w3c.dom.Text;
 
 public class MementoMain {
     public static void main(String[] args) {
-        System.out.println("Memento Pattern");
+        System.out.println("\nMemento Pattern");
 
-        TextEditor editor = new TextEditor();
-        editor.write("Hello world!");
-        editor.write("Hello everyone!");
+        var editor = new Editor();
+        var history = new History();
 
-        // Problem -> undo the last write (Hello world!) without using stack or list.
+        editor.setContent("A");
+        history.push(editor.createState());
+
+
+        editor.setContent("B");
+        history.push(editor.createState());
+
+
+        editor.setContent("C");
+
+        // Problem -> undo the last write (C)
+
+        editor.restore(history.pop());
+//        editor.restore(history.pop());
+
+
         System.out.println(editor.getContent());
     }
 }

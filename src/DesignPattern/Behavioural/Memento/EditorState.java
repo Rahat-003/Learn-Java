@@ -1,13 +1,15 @@
 package DesignPattern.Behavioural.Memento;
 
-public class TextEditor {
+public class EditorState {
     private String content;
 
-    public void write(String text) {
-        this.content = text;
+    public EditorState (String content) {
+        this.content = content;
     }
 
     public String getContent() {
         return content;
     }
+
+
 }

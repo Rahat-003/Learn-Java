@@ -1,14 +1,12 @@
-package Design_Pattern.Memento;
+package DesignPattern.Behavioural.Memento;
+
 
 public class Editor {
     private String content;
 
     public EditorState createState() {
-        return new EditorState(content);
-    }
-
-    public void restore(EditorState state) {
-        content = state.getContent();
+        EditorState editorState = new EditorState(content);
+        return editorState;
     }
 
     public String getContent() {
@@ -18,4 +16,9 @@ public class Editor {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public void restore(EditorState editorState) {
+        content = editorState.getContent();
+    }
+
 }
